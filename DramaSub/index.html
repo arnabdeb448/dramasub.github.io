@@ -52,20 +52,32 @@
         <h1>DramasubBD</h1>
     </header>
     <nav>
-      <script>
-    document.getElementById('search').addEventListener('input', function() {
-        var searchQuery = this.value.toLowerCase();
-        var dramas = document.querySelectorAll('.drama');
-        dramas.forEach(function(drama) {
-            var dramaTitle = drama.querySelector('a').textContent.toLowerCase();
-            if (dramaTitle.includes(searchQuery)) {
-                drama.style.display = 'inline-block';
-            } else {
-                drama.style.display = 'none';
-            }
-        });
-    });
-</script>
+        <ul>
+            <li><a href="#korean">Korean Dramas</a></li>
+            <li><a href="#japanese">Japanese Dramas</a></li>
+            <li><a href="#chinese">Chinese Dramas</a></li>
+            <li><a href="#movies">Movies</a></li>
+        </ul>
+    </nav>
+    <!-- Search Input Field -->
+    <input type="text" id="search" placeholder="Search dramas...">
+    <div id="korean">
+        <!-- Korean Dramas -->
+    </div>
+    <div id="japanese">
+        <!-- Japanese Dramas -->
+    </div>
+    <div id="chinese">
+        <!-- Chinese Dramas -->
+    </div>
+    <div id="movies">
+        <!-- Movies -->
+    </div>
+    <footer>
+        <p>&copy; 2024 DramasubBD. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript for Filtering Dramas -->
+    <script>
         <ul>
             <li><a href="#korean">Korean Dramas</a></li>
             <li><a href="#japanese">Japanese Dramas</a></li>
@@ -205,7 +217,7 @@
         <img src="my_love_story_with_my_irresponsible_teacher.jpg" alt="My Love Story With My Irresponsible Teacher">
         <p><a href="my_love_story_with_my_irresponsible_teacher.html">My Love Story With My Irresponsible Teacher</a></p>
     </div> 
-
+<div id="japanese">
     <div class="drama">
         <img src="ao_ haru_ride_season_1.jpg" alt="Ao Haru Ride Season 1">
         <p><a href="ao_ haru_ride_season_1.html">Ao Haru Ride Season 1</a></p>
