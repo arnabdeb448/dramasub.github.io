@@ -72,18 +72,22 @@
     </div>
     <div id="movies">
         <!-- Movies -->
-    </div>
-    <footer>
-        <p>&copy; 2024 DramasubBD. All rights reserved.</p>
-    </footer>
+    </div>  
     <!-- JavaScript for Filtering Dramas -->
     <script>
-        <ul>
-            <li><a href="#korean">Korean Dramas</a></li>
-            <li><a href="#japanese">Japanese Dramas</a></li>
-            <li><a href="#chinese">Chinese Dramas</a></li>
-            <li><a href="#movies">Movies</a></li>
-<input type="text" id="search" placeholder="Search dramas...">
+        document.getElementById('search').addEventListener('input', function() {
+            var searchQuery = this.value.toLowerCase();
+            var dramas = document.querySelectorAll('.drama');
+            dramas.forEach(function(drama) {
+                var dramaTitle = drama.querySelector('a').textContent.toLowerCase();
+                if (dramaTitle.includes(searchQuery)) {
+                    drama.style.display = 'inline-block';
+                } else {
+                    drama.style.display = 'none';
+                }
+            });
+        });
+    </script>
         </ul>
     </nav>
     <div id="korean">
@@ -219,8 +223,8 @@
     </div> 
 <div id="japanese">
     <div class="drama">
-        <img src="ao_ haru_ride_season_1.jpg" alt="Ao Haru Ride Season 1">
-        <p><a href="ao_ haru_ride_season_1.html">Ao Haru Ride Season 1</a></p>
+        <img src="ao_haru_ride_season_1.jpg" alt="Ao Haru Ride Season 1">
+        <p><a href="ao_haru_ride_season_1.html">Ao Haru Ride Season 1</a></p>
     </div> 
 
     <!-- Add more Japanese dramas as needed -->
